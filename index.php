@@ -42,13 +42,30 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PHP Hotels</title>
+    </head>
+    <body>
+        <header>
+            <h1>
+                Hotels
+            </h1>
+        </header>
+        <main>
+            <ol>
+                <?php
+                    for ($i=0; $i < count($hotels); $i++) { 
+                        echo '<li>';
+                        foreach ($hotels[$i] as $key => $value) {
+                            echo '<h3>'.$key.'</h3>' .' <p>'.$value.'</p>';
+                        }
+                        echo '</li>';
+                    }
+                ?>
+            </ol>
+        </main>
+    </body>
 </html>
